@@ -1,0 +1,25 @@
+{
+  "name": "svelte-geometric-bayes",
+  "description": "3blue1brown-inspired geometric visualization of Bayes theorem",
+  "author": "Janosh Riebesell <janosh.riebesell@gmail.com>",
+  "homepage": "https://github.com/janosh/svelte-geometric-bayes#readme",
+  "repository": "https://github.com/janosh/svelte-geometric-bayes",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "serve": "rollup -c && sirv public --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.0"
+  }
+}
