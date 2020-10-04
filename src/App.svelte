@@ -14,6 +14,9 @@
 
 <main>
 	<h1>Geometric Bayes Theorem</h1>
+	<p><a href="https://youtu.be/HZGCoVF3YvM">3blue1brown-inspired</a> interactive visualization of Bayes theorem interpreted geometrically.</p>
+	<p>Source code on <a href="https://github.com/janosh/svelte-geometric-bayes">GitHub</a>.</p>
+
 	<div id="bayes-container" bind:clientHeight={parentHeight} bind:clientWidth={parentWidth}>
 		<Resizable {...props} bind:width={pH} bind:height={pNotEGivenH} color="teal" resizable="x" handlePos="top: 0%; left: 100%">
 			<span style="left: 50%; top: 0; transform: translate(-50%, calc(-100% - 1ex));">
@@ -48,8 +51,8 @@
 	#bayes-container {
 		position: relative;
 		background: #434343;
-		width: 80vw;
-		height: 80vw;
+		width: 50vw;
+		height: 50vw;
 		max-height: 600px;
 		max-width: 600px;
 		margin: 10em auto 0;
@@ -80,13 +83,25 @@
 		padding: 1em;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 			Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+		color: white;
+	}
+
+	p {
+		text-align: center;
+		font-size: 3ex;
+		margin: 1em 3em;
+	}
+
+	a {
+		color: DeepSkyBlue;
+		text-decoration: none;
 	}
 
 	span {
 		position: absolute;
-		color: white;
 		font-size: 4ex;
 		white-space: nowrap;
+		font-weight: 200;
 	}
 
 	#bayes-out {
@@ -95,6 +110,7 @@
 		background: SteelBlue;
 		border: 2px solid white;
 	}
+
 	#bayes-out div {
 		background: DeepSkyBlue;
 		height: 100%;
