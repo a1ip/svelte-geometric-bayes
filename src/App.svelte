@@ -41,6 +41,15 @@
 			</span>
 		</div>
 	</div>
+	<legend>
+		<h2>Legend</h2>
+		<ul>
+			<li>p(H) = probability of hypothesis</li>
+			<li>p(E|H) = probability of evidence given hypothesis</li>
+			<li>p(E|&not;H) = probability of evidence given not the hypothesis</li>
+			<li>p(H|E) = probability of hypothesis given evidence (this is usually what we want to know)</li>
+		</ul>
+	</legend>
 </main>
 
 <style>
@@ -78,18 +87,25 @@
 
 	main {
 		background: #090019;
-		height: 100%;
 		margin: 0;
-		padding: 1em;
+		padding: 2em;
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 			Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 		color: white;
+		font-weight: 200;
+		min-height: 100vh;
 	}
 
 	p {
 		text-align: center;
-		font-size: 3ex;
-		margin: 1em 3em;
+	}
+	span, p, li {
+		font-size: calc(1ex + 2vw);
+	}
+	@media (min-width: 1200px) {
+		span, p, li {
+			font-size: 30px;
+		}
 	}
 
 	a {
@@ -99,13 +115,11 @@
 
 	span {
 		position: absolute;
-		font-size: 4ex;
 		white-space: nowrap;
-		font-weight: 200;
 	}
 
 	#bayes-out {
-		margin: 6em auto 0;
+		margin: 6em auto;
 		height: 100px;
 		background: SteelBlue;
 		border: 2px solid white;
