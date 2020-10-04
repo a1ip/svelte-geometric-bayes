@@ -4,9 +4,11 @@
 
 # Geometric Bayes Theorem
 
+[3blue1brown-inspired](https://youtu.be/HZGCoVF3YvM) interactive visualization of Bayes theorem interpreted geometrically. Created as a 1-day side-project to learn some [Svelte](https://github.com/sveltejs/svelte). Hence, beware of potentially terrible code quality. 🤷‍♂️
+
 ## Get started
 
-1. Install the dependencies...
+1. Clone and install dependencies:
 
    ```sh
    git clone https://github.com/janosh/svelte-geometric-bayes
@@ -22,17 +24,15 @@
 
 Navigate to <http://localhost:5000>. You should see this app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
-By default, the server will only respond to requests from `localhost`. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
-
 ## Building and running in production mode
 
-To create an optimized version of the app, run
+To build and serve an optimized version of the app, run
 
 ```sh
-yarn build
+yarn serve
 ```
 
-You can run the newly built app with `yarn start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Netlify](https://netlify.com).
+This uses [sirv](https://github.com/lukeed/sirv), which is included in `package.json` `dependencies` so the app works when deployed to platforms like [Netlify](https://netlify.com).
 
 ## Deploying to Netlify
 
