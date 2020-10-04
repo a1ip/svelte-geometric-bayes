@@ -4,12 +4,10 @@
 </div>
 
 <script>
-  export let width = 50
-  export let height = 50
-  export let left = 0
-  export let top = 0
+  export let width = 50, height = 50
   export let pos = 'top: 0; left: 0;'
   export let handlePos = 'top: 0; left: 0;'
+  export let parentWidth, parentHeight
 
   export let color
   export let resizable = 'xy' // 'x', 'y' or 'xy'
@@ -33,10 +31,16 @@
   const resizePointerMove = e => {
     let dirX = pos.includes('right') ? -1 : 1
     let dirY = pos.includes('bottom') ? -1 : 1
-    if (resizable.includes('x'))
-      width = (initialWidth * dirX + e.pageX - resizeInitX) * dirX
-    if (resizable.includes('y'))
-      height = (initialHeight * dirY + e.pageY - resizeInitY) * dirY
+    let scaleX = parentWidth / 100
+    let scaleY = parentHeight / 100
+    if (resizable.includes('x')) {
+      let newWidth = (initialWidth * dirX + (e.pageX - resizeInitX)/scaleX) * dirX
+      width = Math.min(100, Math.max(0, newWidth)) // prevent extending beyond container
+    }
+    if (resizable.includes('y')) {
+      let newHeight = (initialHeight * dirY + (e.pageY - resizeInitY)/scaleY) * dirY
+      height = Math.min(100, Math.max(0, newHeight)) // prevent extending beyond container
+    }
   }
 
   const resizePointerUp = () => {
