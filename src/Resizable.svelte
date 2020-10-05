@@ -69,8 +69,10 @@
     right: 0;
     bottom: 0;
     cursor: pointer; /* consider using 'nw-resize' and friends */
-    width: 3ex;
-    height: 3ex;
+    width: calc(1ex + 2vw);
+    max-width: 3ex;
+    height: calc(1ex + 2vw);
+    max-height: 3ex;
     background: orange;
     border: 2px solid white;
     border-radius: 50%;
