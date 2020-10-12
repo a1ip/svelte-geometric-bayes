@@ -1,10 +1,6 @@
-<div class="resizable" style="{pos} width: {width}%; height:{height}%; background: {color};">
-  <slot />
-  <div class="resizer" on:pointerdown|stopPropagation={resizePointerDown} style={handlePos} />
-</div>
-
 <script>
-  export let width = 50, height = 50
+  export let width = 50,
+    height = 50
   export let pos = 'top: 0; left: 0;'
   export let handlePos = 'top: 0; left: 0;'
   export let parentWidth, parentHeight
@@ -16,39 +12,47 @@
 
   let initialWidth, initialHeight
 
-  const resizePointerDown = e => {
+  const resizePointerDown = (e) => {
+    e.stopPropagation()
     resizeInitX = e.pageX
     resizeInitY = e.pageY
 
     initialWidth = width
     initialHeight = height
 
-    window.addEventListener("pointermove", resizePointerMove)
-    window.addEventListener("pointerup", resizePointerUp)
-    window.addEventListener("pointercancel", resizePointerUp)
+    window.addEventListener('pointermove', resizePointerMove)
+    window.addEventListener('pointerup', resizePointerUp)
+    window.addEventListener('pointercancel', resizePointerUp)
   }
 
-  const resizePointerMove = e => {
+  const resizePointerMove = (e) => {
     let dirX = pos.includes('right') ? -1 : 1
     let dirY = pos.includes('bottom') ? -1 : 1
     let scaleX = parentWidth / 100
     let scaleY = parentHeight / 100
     if (resizable.includes('x')) {
-      let newWidth = (initialWidth * dirX + (e.pageX - resizeInitX)/scaleX) * dirX
+      let newWidth = (initialWidth * dirX + (e.pageX - resizeInitX) / scaleX) * dirX
       width = Math.min(100, Math.max(0, newWidth)) // prevent extending beyond container
     }
     if (resizable.includes('y')) {
-      let newHeight = (initialHeight * dirY + (e.pageY - resizeInitY)/scaleY) * dirY
+      let newHeight = (initialHeight * dirY + (e.pageY - resizeInitY) / scaleY) * dirY
       height = Math.min(100, Math.max(0, newHeight)) // prevent extending beyond container
     }
   }
 
   const resizePointerUp = () => {
-    window.removeEventListener("pointermove", resizePointerMove)
-    window.removeEventListener("pointerup", resizePointerUp)
-    window.removeEventListener("pointercancel", resizePointerUp)
+    window.removeEventListener('pointermove', resizePointerMove)
+    window.removeEventListener('pointerup', resizePointerUp)
+    window.removeEventListener('pointercancel', resizePointerUp)
   }
 </script>
+
+<div
+  class="resizable"
+  style="{pos} width: {width}%; height:{height}%; background: {color};">
+  <slot />
+  <div class="resizer" on:pointerdown={resizePointerDown} style={handlePos} />
+</div>
 
 <style>
   .resizable {
@@ -56,12 +60,9 @@
     position: absolute;
     will-change: transform;
     /* use box-shadow instead of border to achieve border collapse: https://stackoverflow.com/a/28807765 */
-    box-shadow:
-    2px 0 0 0 white,
-    0 2px 0 0 white,
-    2px 0 0 0 white inset,
-    0 2px 0 0 white inset;
- }
+    box-shadow: 2px 0 0 0 white, 0 2px 0 0 white, 2px 0 0 0 white inset,
+      0 2px 0 0 white inset;
+  }
 
   .resizer {
     user-select: none;
