@@ -1,12 +1,12 @@
 <script>
   export let width = 50,
     height = 50
-  export let pos = 'top: 0; left: 0;'
-  export let handlePos = 'top: 0; left: 0;'
+  export let pos = `top: 0; left: 0;`
+  export let handlePos = `top: 0; left: 0;`
   export let parentWidth, parentHeight
 
   export let color
-  export let resizable = 'xy' // 'x', 'y' or 'xy'
+  export let resizable = `xy` // `x`, `y` or `xy`
 
   let resizeInitX, resizeInitY
 
@@ -20,30 +20,30 @@
     initialWidth = width
     initialHeight = height
 
-    window.addEventListener('pointermove', resizePointerMove)
-    window.addEventListener('pointerup', resizePointerUp)
-    window.addEventListener('pointercancel', resizePointerUp)
+    window.addEventListener(`pointermove`, resizePointerMove)
+    window.addEventListener(`pointerup`, resizePointerUp)
+    window.addEventListener(`pointercancel`, resizePointerUp)
   }
 
   const resizePointerMove = (e) => {
-    let dirX = pos.includes('right') ? -1 : 1
-    let dirY = pos.includes('bottom') ? -1 : 1
+    let dirX = pos.includes(`right`) ? -1 : 1
+    let dirY = pos.includes(`bottom`) ? -1 : 1
     let scaleX = parentWidth / 100
     let scaleY = parentHeight / 100
-    if (resizable.includes('x')) {
+    if (resizable.includes(`x`)) {
       let newWidth = (initialWidth * dirX + (e.pageX - resizeInitX) / scaleX) * dirX
       width = Math.min(100, Math.max(0, newWidth)) // prevent extending beyond container
     }
-    if (resizable.includes('y')) {
+    if (resizable.includes(`y`)) {
       let newHeight = (initialHeight * dirY + (e.pageY - resizeInitY) / scaleY) * dirY
       height = Math.min(100, Math.max(0, newHeight)) // prevent extending beyond container
     }
   }
 
   const resizePointerUp = () => {
-    window.removeEventListener('pointermove', resizePointerMove)
-    window.removeEventListener('pointerup', resizePointerUp)
-    window.removeEventListener('pointercancel', resizePointerUp)
+    window.removeEventListener(`pointermove`, resizePointerMove)
+    window.removeEventListener(`pointerup`, resizePointerUp)
+    window.removeEventListener(`pointercancel`, resizePointerUp)
   }
 </script>
 
