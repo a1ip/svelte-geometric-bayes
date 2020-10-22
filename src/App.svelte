@@ -89,6 +89,7 @@
 <style>
   :global(body) {
     margin: 0;
+    background: #090019;
   }
 
   #bayes-container {
@@ -119,7 +120,6 @@
   }
 
   main {
-    background: #090019;
     padding: 2em;
     font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
     color: white;
