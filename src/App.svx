@@ -1,0 +1,75 @@
+<script>
+  import GeometricBayes from './GeometricBayes.svelte'
+</script>
+
+# Geometric Bayes Theorem
+
+[3blue1brown-inspired](https://youtu.be/HZGCoVF3YvM) interactive visualization of Bayes theorem interpreted geometrically.
+
+Source code on [GitHub](https://github.com/janosh/svelte-geometric-bayes).
+
+<GeometricBayes />
+
+<legend>
+
+## Legend
+
+- p(H) = probability of hypothesis
+- p(E|H) = probability of evidence given hypothesis
+- p(E|&not;H) = probability of evidence given not the hypothesis
+- p(H|E) = probability of hypothesis given evidence (what we want to know)
+
+</legend>
+
+## Bayes Theorem by Grant Sanderson
+
+<div class="embed">
+  <iframe
+    title="Video"
+    src="https://youtube.com/embed/HZGCoVF3YvM"
+    frameborder="0"
+    allow="autoplay; fullscreen"
+    allowfullscreen />
+</div>
+
+<style>
+  :global(body) {
+    background: #090019;
+    text-align: center;
+    padding: 2vw;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 200;
+    font-size: 4ex;
+    max-width: 40em;
+    margin: 1em auto 5em;
+  }
+  a {
+    color: DeepSkyBlue;
+    text-decoration: none;
+  }
+  h1,
+  h2 {
+    color: orange;
+    font-size: 5ex;
+    font-weight: 200;
+  }
+  legend {
+    margin: 5em auto 2em;
+    text-align: left;
+  }
+  div.embed {
+    position: relative;
+    margin: auto;
+    width: 99%; /*only 99% to show border-right*/
+    height: 0;
+    padding-bottom: 56.25%;
+    border: 1px solid;
+  }
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+</style>

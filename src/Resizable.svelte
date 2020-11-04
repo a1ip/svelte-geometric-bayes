@@ -63,7 +63,6 @@
     box-shadow: 2px 0 0 0 white, 0 2px 0 0 white, 2px 0 0 0 white inset,
       0 2px 0 0 white inset;
   }
-
   .resizer {
     user-select: none;
     position: absolute;
@@ -71,9 +70,9 @@
     bottom: 0;
     cursor: pointer; /* consider using 'nw-resize' and friends */
     width: calc(1ex + 2vw);
-    max-width: 3ex;
+    max-width: 2ex;
     height: calc(1ex + 2vw);
-    max-height: 3ex;
+    max-height: 2ex;
     background: orange;
     border: 2px solid white;
     border-radius: 50%;
