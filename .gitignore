@@ -1,2 +1,10 @@
+# dependencies
 node_modules
-public/build
+
+# production build
+.svelte
+build
+functions
+
+# deploy config
+.netlify

@@ -1,5 +1,5 @@
 <script>
-  import GeometricBayes from './GeometricBayes.svelte'
+  import GeometricBayes from '../components/GeometricBayes.svelte'
 </script>
 
 # Geometric Bayes Theorem

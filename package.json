@@ -1,29 +1,27 @@
 {
-  "name": "svelte-geometric-bayes",
-  "description": "3blue1brown-inspired geometric visualization of Bayes theorem",
   "author": "Janosh Riebesell <janosh.riebesell@gmail.com>",
-  "homepage": "https://github.com/janosh/svelte-geometric-bayes#readme",
-  "repository": "https://github.com/janosh/svelte-geometric-bayes",
-  "license": "MIT",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "rollup -c -w",
-    "serve": "rollup -c && yarn start",
-    "start": "sirv public --host 0.0.0.0"
-  },
+  "description": "3blue1brown-inspired geometric visualization of Bayes theorem",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "eslint": "^7.12.1",
-    "eslint-plugin-svelte3": "^2.7.3",
-    "mdsvex": "^0.8.8",
-    "prettier": "^2.1.2",
-    "prettier-plugin-svelte": "^1.4.1",
-    "rollup": "^2.33.1",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^6.1.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "sirv-cli": "^1.0.8",
-    "svelte": "^3.29.4"
-  }
+    "@sveltejs/adapter-netlify": "^1.0.0-next.4",
+    "@sveltejs/kit": "^1.0.0-next.64",
+    "eslint": "^7.22.0",
+    "eslint-plugin-svelte3": "^3.1.2",
+    "mdsvex": "^0.9.0",
+    "prettier": "^2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.35.0",
+    "vite": "^2.1.4"
+  },
+  "homepage": "https://github.com/janosh/svelte-geometric-bayes#readme",
+  "license": "MIT",
+  "name": "svelte-geometric-bayes",
+  "repository": "https://github.com/janosh/svelte-geometric-bayes",
+  "scripts": {
+    "build": "svelte-kit build",
+    "dev": "svelte-kit dev",
+    "serve": "svelte-kit build && svelte-kit start",
+    "start": "svelte-kit start"
+  },
+  "type": "module",
+  "version": "1.0.0"
 }
