@@ -16,8 +16,8 @@ Source code on [GitHub](https://github.com/janosh/svelte-geometric-bayes).
 
 - p(H) = probability of hypothesis
 - p(E|H) = probability of evidence given hypothesis
-- p(E|&not;H) = probability of evidence given not the hypothesis
-- p(H|E) = probability of hypothesis given evidence (what we want to know)
+- p(E|&not;H) = probability of evidence given the hypothesis is false
+- p(H|E) = probability of hypothesis given evidence (what we ultimately want to know)
 
 </legend>
 

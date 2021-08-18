@@ -6,7 +6,7 @@
 
 [3blue1brown-inspired](https://youtu.be/HZGCoVF3YvM) interactive visualization of Bayes theorem interpreted geometrically. Just a side-project to learn some [Svelte](https://github.com/sveltejs/svelte).
 
-## Get started
+## Get it running locally
 
 1. Clone and install dependencies:
 
@@ -16,17 +16,17 @@
    yarn
    ```
 
-2. Start [`svelte-kit`](https://kit.svelte.dev):
+2. Start the [`svelte-kit`](https://kit.svelte.dev) development server:
 
    ```sh
    yarn dev
    ```
 
-Navigate to <http://localhost:3000>. You should see this app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+Navigate to <http://localhost:3000>. You should see this app running. Edit a component file in `src`, save it. The dev server should hot-reload with your changes.
 
 ## Building and running in production mode
 
-To build and serve an optimized version of the app, run
+To build and preview an optimized production version of the app, run
 
 ```sh
 yarn serve
@@ -43,7 +43,7 @@ yarn global add netlify-cli
 Then, from within this project's folder:
 
 ```sh
-netlify deploy --prod
+netlify deploy --build --prod
 ```
 
 ## Formatting
