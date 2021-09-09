@@ -1,27 +1,27 @@
 {
   "author": "Janosh Riebesell <janosh.riebesell@gmail.com>",
   "description": "3blue1brown-inspired geometric visualization of Bayes theorem",
-  "homepage": "https://github.com/janosh/svelte-geometric-bayes#readme",
   "license": "MIT",
   "name": "svelte-geometric-bayes",
+  "homepage": "https://svelte-geometric-bayes.netlify.app",
   "repository": "https://github.com/janosh/svelte-geometric-bayes",
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "build": "svelte-kit build",
     "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "serve": "yarn build && yarn preview"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.16",
-    "@sveltejs/kit": "^1.0.0-next.153",
+    "@sveltejs/adapter-static": "^1.0.0-next.18",
+    "@sveltejs/kit": "^1.0.0-next.165",
     "eslint": "^7.32.0",
     "eslint-plugin-svelte3": "^3.2.0",
     "mdsvex": "^0.9.8",
     "prettier": "^2.3.2",
-    "prettier-plugin-svelte": "^2.3.1",
-    "svelte": "^3.42.1",
-    "vite": "^2.5.0"
+    "prettier-plugin-svelte": "^2.4.0",
+    "svelte": "^3.42.4",
+    "vite": "^2.5.6"
   }
 }

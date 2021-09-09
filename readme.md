@@ -4,7 +4,7 @@
 
 # Geometric Bayes Theorem [![Netlify Status](https://api.netlify.com/api/v1/badges/f9f43f4a-6b26-4a6d-be3e-b2925f79b643/deploy-status)](https://app.netlify.com/sites/svelte-geometric-bayes/deploys)
 
-[3blue1brown-inspired](https://youtu.be/HZGCoVF3YvM) interactive visualization of Bayes theorem interpreted geometrically. Just a side-project to learn some [Svelte](https://github.com/sveltejs/svelte).
+[3blue1brown-inspired](https://youtu.be/HZGCoVF3YvM) interactive visualization of Bayes theorem. Just a side-project to learn some [Svelte](https://github.com/sveltejs/svelte).
 
 ## Get it running locally
 

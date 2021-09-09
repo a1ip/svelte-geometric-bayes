@@ -1,0 +1,35 @@
+# Install these hooks with `pre-commit install`.
+# Setup CI at https://pre-commit.ci.
+
+ci:
+  autoupdate_schedule: quarterly
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier
+        args: [--write] # edit files in-place
+        additional_dependencies:
+          - prettier
+          - prettier-plugin-svelte
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v7.32.0
+    hooks:
+      - id: eslint
+        files: \.(js|svelte)$
+        types: [file]
+        args: [--fix]
+        additional_dependencies:
+          - eslint
+          - svelte
+          - eslint-plugin-svelte3
