@@ -21,6 +21,7 @@ repos:
         additional_dependencies:
           - prettier
           - prettier-plugin-svelte
+          - svelte
 
   - repo: https://github.com/pre-commit/mirrors-eslint
     rev: v7.32.0
@@ -33,3 +34,12 @@ repos:
           - eslint
           - svelte
           - eslint-plugin-svelte3
+
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: v0.11.0
+    hooks:
+      - id: markdownlint
+        # MD013: Line length
+        # MD029: Ordered list item prefix
+        # MD033: Inline HTML
+        args: [-r, '~MD013,~MD029,~MD033']
