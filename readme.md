@@ -34,28 +34,3 @@ To build and preview an optimized production version of the app, run
 ```sh
 yarn serve
 ```
-
-## Deploying to Netlify
-
-Install `netlify` if you haven't already:
-
-```sh
-yarn global add netlify-cli
-```
-
-Then, from within this project's folder:
-
-```sh
-netlify deploy --build --prod
-```
-
-## Formatting
-
-When using VS Code, install the [official Svelte extension](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) and add the following to your `settings.json` to enable autoformating Svelte files on save:
-
-```json
-"[svelte]": {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "svelte.svelte-vscode"
-}
-```
