@@ -21,7 +21,8 @@
     bind:height={pNotEGivenH}
     color="teal"
     resizable="x"
-    handlePos="top: 0%; left: 100%">
+    handlePos="top: 0%; left: 100%"
+  >
     <span style="left: 50%; top: 0; transform: translate(-50%, calc(-100% - 1ex));">
       p(H) =
       {Math.round(pH)}%
@@ -33,7 +34,8 @@
     bind:height={pEGivenH}
     color="DeepSkyBlue"
     resizable="y"
-    pos="bottom: 0; left: 0;">
+    pos="bottom: 0; left: 0;"
+  >
     <span style="left: 0; top: 50%; transform: translate(calc(-100% - 1ex), -50%);">
       p(E|H) =
       {Math.round(pEGivenH)}%
@@ -46,7 +48,8 @@
     color="SteelBlue"
     resizable="y"
     pos="bottom: 0; right: 0;"
-    handlePos="top: 0%; left: 100%">
+    handlePos="top: 0%; left: 100%"
+  >
     <span style="right: 0; top: 50%; transform: translate(calc(100% + 1ex), -50%);">
       p(E|&not;H) =
       {Math.round(pEGivenNotH)}%

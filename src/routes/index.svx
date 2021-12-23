@@ -44,7 +44,6 @@
     font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
     color: white;
     font-weight: 200;
-    font-size: 4ex;
     max-width: 40em;
     margin: 1em auto 5em;
   }
@@ -55,11 +54,7 @@
   h1,
   h2 {
     color: orange;
-    font-size: 5ex;
-    font-weight: 200;
-  }
-  h2 {
-    font-size: 4ex;
+    font-weight: lighter;
   }
   legend {
     margin: 5em auto 2em;

@@ -49,7 +49,8 @@
 
 <div
   class="resizable"
-  style="{pos} width: {width}%; height:{height}%; background: {color};">
+  style="{pos} width: {width}%; height:{height}%; background: {color};"
+>
   <slot />
   <div class="resizer" on:pointerdown={resizePointerDown} style={handlePos} />
 </div>
